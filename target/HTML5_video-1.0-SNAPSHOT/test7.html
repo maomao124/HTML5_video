@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<!--
+Project name(项目名称)：HTML5_video
+  File name(文件名): test7
+  Authors(作者）: mao
+  Author QQ：1296193245
+  GitHub：https://github.com/maomao124/
+  Date(创建日期)： 2022/4/12
+  Time(创建时间)： 12:04
+  Description(描述)： 无
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        button{
+            font-size: 36px;
+            color: cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+<video id="video" src="video.webm" controls="controls" width="1280" height="720">
+    浏览器不支持HTML5视频播放
+</video>
+
+<br>
+<button id="button">跳转</button>
+</body>
+
+<script>
+
+    var video = document.getElementById('video');
+    var button = document.getElementById('button');
+
+    button.onclick = function ()
+    {
+        video.currentTime = 2;
+    }
+
+</script>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<!--
+Project name(项目名称)：HTML5_video
+  File name(文件名): test8
+  Authors(作者）: mao
+  Author QQ：1296193245
+  GitHub：https://github.com/maomao124/
+  Date(创建日期)： 2022/4/12
+  Time(创建时间)： 12:13
+  Description(描述)： 无
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        div {
+            font-size: 36px;
+            color: cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+<video id="video" src="video.webm" controls="controls" autoplay="autoplay" width="1280">
+
+</video>
+<br/>
+<!--视频播放的时间状态-->
+<div id="status"></div>
+<script>
+    function getTime()
+    {
+        var video = document.getElementById("video");
+        var starttime = video.seekable.start(0);
+        var endtime = video.seekable.end(0);
+        var play_end = video.played.end(0);
+        var status = document.getElementById("status");
+        //更新视频播放的时间状态
+        status.innerHTML = "视频开始时间：" + starttime + "<br />视频结束时间：" + endtime + "<br />视频已播放时间：" + play_end;
+    }
+
+    setInterval(getTime, 300);
+</script>
+</body>
+</html>

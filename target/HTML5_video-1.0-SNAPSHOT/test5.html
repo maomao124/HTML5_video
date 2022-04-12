@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<!--
+Project name(项目名称)：HTML5_video
+  File name(文件名): test5
+  Authors(作者）: mao
+  Author QQ：1296193245
+  GitHub：https://github.com/maomao124/
+  Date(创建日期)： 2022/4/12
+  Time(创建时间)： 10:58
+  Description(描述)： 无
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: skyblue;
+        }
+
+        #button {
+            font-size: 36px;
+            color: springgreen;
+        }
+
+        #add {
+            font-size: 36px;
+            color: springgreen;
+        }
+
+        #sub {
+            font-size: 36px;
+            color: springgreen;
+        }
+
+        #reduce {
+            font-size: 36px;
+            color: springgreen;
+        }
+
+    </style>
+</head>
+<body>
+<video id="video" src="video.webm" width="1280">
+
+</video>
+
+<div>
+    <button id="button" onclick="change()">播放</button>
+    <button id="add" onclick="add()">放大</button>
+    <button id="reduce" onclick="reduce()">还原</button>
+    <button id="sub" onclick="sub()">缩小</button>
+
+</div>
+
+<script>
+    var video = document.getElementById('video');
+    var button = document.getElementById("button");
+
+    function change()
+    {
+        if (video.paused)
+        {
+            video.play()
+            button.innerHTML = "暂停"
+            button.style.color = "red";
+        }
+        else
+        {
+            video.pause()
+            button.innerHTML = "播放"
+            button.style.color = "springgreen";
+        }
+    }
+
+    function add()
+    {
+        video.width = 1600
+    }
+
+    function sub()
+    {
+        video.width = 720
+    }
+
+    function reduce()
+    {
+        video.width = 1280
+    }
+
+
+</script>
+
+</body>
+</html>
