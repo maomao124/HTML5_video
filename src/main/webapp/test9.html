@@ -17,6 +17,18 @@ Project name(项目名称)：HTML5_video
     <title>Title</title>
 </head>
 <body>
-
+<video id="video" src="video.webm" controls="controls" width="1280"></video>
+<br/>
+<button onclick="stopMedia()">
+    点击此处终止视频下载
+</button>
+<script>
+    function stopMedia()
+    {
+        var video = document.getElementById("video");
+        video.pause();
+        video.src = "";
+    }
+</script>
 </body>
 </html>
