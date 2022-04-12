@@ -3,11 +3,21 @@
 <html>
 <head>
     <title>JSP - Hello World</title>
+    <link rel="stylesheet" href="link.css">
 </head>
 <body>
-<h1><%= "Hello World!" %>
-</h1>
 <br/>
-<a href="hello-servlet">Hello Servlet</a>
+<br>
+<%int n = 9;%>
+<%
+    for (int i = 0; i < n; i++)
+    {
+
+%>
+<a href="test<%=(i+1)%>.html">test<%=(i + 1)%>.html</a>
+<br>
+<%
+    }
+%>
 </body>
 </html>
